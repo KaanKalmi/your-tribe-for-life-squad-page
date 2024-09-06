@@ -1,7 +1,8 @@
 <script>
 	export let data;
-  import ButtonComponent from './button.svelte';
+  	import ButtonComponent from './button.svelte';
 	import Brief from '$lib/briefForm.svelte';
+	import DesktopCard from '$lib/desktopCard.svelte';
 	console.log({ data });
 </script>
 
@@ -14,3 +15,4 @@
 </style>
 
 <Brief />
+<DesktopCard />

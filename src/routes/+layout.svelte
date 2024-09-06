@@ -12,3 +12,4 @@ onNavigate((navigation) => {
 	});
 });
 </script>
+<slot />
