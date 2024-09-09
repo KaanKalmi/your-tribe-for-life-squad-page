@@ -38,21 +38,26 @@
 <hr>
 <p>dit is een andere klas </p>
 <ul>
-
     {#each data.squad2 as person}
         <li>
+            <a href="/{person.id}">
 
-            {person.name}
+
+                {person.name}
+            </a>
         </li>
     {/each}
 </ul>
 <p>dit is een andere klas </p>
-<ul>
 
+<ul>
     {#each data.squada as person}
         <li>
+            <a href="/{person.id}">
 
-            {person.name}
+
+                {person.name}
+            </a>
         </li>
     {/each}
 </ul>
