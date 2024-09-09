@@ -4,6 +4,7 @@
     // are immediately available
     console.log({ data });
 
+    let enlarged = false;
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -21,9 +22,8 @@
 </script>
 
 <style>
-    .enlarged {
+    .enlarged{
         transform: scale(1.2);
-        background-color: red;
     }
 
     .border-img {
@@ -34,11 +34,13 @@
         margin-block: 12px;
         margin-inline: 8px;
         overflow: hidden;
+        background-color: transparent;
 
-        & article {
+        & button {
             background: transparent;
             height: 100%;
             width: 100%;
+            transform: scale(var(--scale));
 
             & img {
                 display: flex;
@@ -65,11 +67,11 @@
     }
 </style>
 
-<div class="border-img">
-    <article class="interactive-card">
+<article class="border-img">
+    <button class="interactive-card"  on:click={enlarged = !enlarged} style={(enlarged ? "--scale: 1.2" : "--scale: 1")}>
         <img src="#" class="center-img" alt="#">
         <h3>Naam</h3>
         <h4>Achternaam</h4>
         <p>Squad</p>
-    </article>
-</div>
+    </button>
+</article>
