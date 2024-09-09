@@ -6,8 +6,39 @@
 </script>
 
 <h1>Example:</h1>
+<!--<ul>-->
+<!--    {#each data.persons as person}-->
+<!--        <li>-->
+
+<!--            {person.name}-->
+<!--        </li>-->
+<!--    {/each}-->
+<!--</ul>-->
+<p>dit is squad 1d</p>
 <ul>
-    {#each data.persons as person}
+
+    {#each data.squadD as person}
+        <li>
+
+            {person.name}
+        </li>
+    {/each}
+</ul>
+<hr>
+<p>dit is een andere klas </p>
+<ul>
+
+    {#each data.squad2 as person}
+        <li>
+
+            {person.name}
+        </li>
+    {/each}
+</ul>
+<p>dit is een andere klas </p>
+<ul>
+
+    {#each data.squada as person}
         <li>
 
             {person.name}
@@ -16,6 +47,7 @@
 </ul>
 <ButtonComponent />
 <style>
+
 
 </style>
 
