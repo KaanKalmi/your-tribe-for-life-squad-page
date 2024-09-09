@@ -6,8 +6,14 @@
 </script>
 
 <h1>Example:</h1>
-<h2>{data.persons[2].name}</h2>
-<p>{data.persons[2].prefix} {data.persons[2].surname}</p>
+<ul>
+    {#each data.persons as person}
+        <li>
+
+            {person.name}
+        </li>
+    {/each}
+</ul>
 <ButtonComponent />
 <style>
 
