@@ -2,6 +2,13 @@
 	export let data;
   import ButtonComponent from './button.svelte';
 	import Brief from '$lib/briefForm.svelte';
+    function checkAvatarImage (avatar) {
+        if (avatar.includes('https')) {
+            return true
+        }
+
+        return false
+    }
 	console.log({ data });
 </script>
 
@@ -15,12 +22,16 @@
 <!--    {/each}-->
 <!--</ul>-->
 <p>dit is squad 1d</p>
-<ul>
 
+
+<ul>
     {#each data.squadD as person}
         <li>
+            <a href="/{person.id}">
 
-            {person.name}
+
+                {person.name}
+            </a>
         </li>
     {/each}
 </ul>
