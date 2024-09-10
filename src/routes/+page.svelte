@@ -21,9 +21,6 @@
 <main>
 
 
-<h1>squad 1D</h1>
-
-
 <ul>
     {#each data.squadD as person}
         <li>
@@ -117,10 +114,10 @@
     header{
         font-size: 80px;
         display: flex;
-        justify-content: center;
         background-color: #33293A;
         color: white;
         font-family: "Italianno", sans-serif;
+        margin-left: 0.5em;
     }
 
     main {
@@ -129,11 +126,7 @@
         font-size: 16px;
         background-color: #33293A;
     }
-    h1{
-        margin-left: 2em;
-        color: white;
-        font-size: 40px;
-    }
+
     ul {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -176,15 +169,13 @@
         align-items: center;
         justify-content: center;
         border-left: #140A3D 2px solid;
-        padding-left: 2em;
+        padding-left: 1em;
         font-size: 25px;
-
-        /* padding-top: 1em; */
-        margin-top: 1em;
+      margin: 1em 0 1em 0
     }
     a{
         grid-column: 1;
-        font-size: 24px;
+        font-size: 40px;
         color: black;
 
 
