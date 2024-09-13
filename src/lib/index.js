@@ -2,3 +2,4 @@
 import pfp from '$lib/images/pfp.png';
 
 export {pfp};
+export default {};

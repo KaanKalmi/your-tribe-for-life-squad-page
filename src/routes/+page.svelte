@@ -3,15 +3,14 @@
     import ButtonComponent from '$lib/button.svelte';
     import Brief from '$lib/briefForm.svelte';
     import pfp from '$lib/index.js';
-    // import desktopCard from '$lib/desktopCard.svelte';
 
-    // function checkAvatarImage(avatar) {
-    //     if (avatar.includes('https')) {
-    //         return true
-    //     }
+    function checkAvatarImage(avatar) {
+        if (avatar.includes('https')) {
+            return true
+        }
 
-    //     return false
-    // }
+        return false
+    }
 
     console.log({data});
 </script>
@@ -25,8 +24,6 @@
 
     header{
         font-size: 80px;
-        display: flex;
-        background-color: #33293A;
         color: white;
         font-family: "Italianno", sans-serif;
         margin-left: 0.5em;
