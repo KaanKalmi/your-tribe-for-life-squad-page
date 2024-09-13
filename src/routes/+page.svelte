@@ -3,13 +3,13 @@
     import ButtonComponent from './button.svelte';
     import Brief from '$lib/briefForm.svelte';
 
-    function checkAvatarImage(avatar) {
-        if (avatar.includes('https')) {
-            return true
-        }
+    // function checkAvatarImage(avatar) {
+    //     if (avatar.includes('https')) {
+    //         return true
+    //     }
 
-        return false
-    }
+    //     return false
+    // }
 
     console.log({data});
 </script>
