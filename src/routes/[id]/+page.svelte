@@ -32,7 +32,7 @@
         </section>
 
         <section>
-            <div class="envelop close">
+            <div class="envelop close" class:open={isOpen}>
                 <div class="flap"></div>
                 <article>
                     <div>
