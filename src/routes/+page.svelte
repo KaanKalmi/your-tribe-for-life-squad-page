@@ -105,7 +105,7 @@
 <body>
 <main>
     <div class="cards-container">
-        {#each data.squadD as person}
+        {#each data.persons as person}
         <div class="container">
             <article class="businessCard">
                 <div class="leftAligned">
