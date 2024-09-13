@@ -32,7 +32,7 @@
 
     main {
         line-height: 1.5;
-        font-family: "Italianno", sans-serif;
+        font-family: sans-serif;
         font-size: 16px;
         background-color: #33293A;
 
@@ -51,51 +51,53 @@
             position: relative;
             width: 500px;
             height: 350px;
-            background-color: #252525;
+            background-color: #fdf3e2;
             border-radius: 8px;
-            border: 2px solid #91d5f025;
+            border: 2px solid #3b3b3b;
             display: flex;
             justify-content: center;
             margin: auto;
-            box-shadow: 4px 8px 12px 8px rgba(0,0,0,0.35);
+            box-shadow: 4px 8px 12px 8px rgba(0,0,0,0.25);
 
             & .leftAligned{
                 position: absolute;
                 left: 0;
                 height: 100%;
-                width: 45%;
+                width: 50%;
                 
                 & img{
                     height: 100%;
                     width: 100%;
-                    border-radius: 8px 0 0 8px; 
-                    border-right: 1px solid #42C9FF;
+                    border-radius: 6px 0 0 6px; 
+                    border-right: 2px solid #3b3b3b;
                     object-fit: cover;
                 }
             }
 
-            & .figure{
-                position: absolute;
-                bottom: 0;
-                z-index: 1;
-            }
-
             & .rightAligned{
-                margin-left: 10em;
+                margin-left: 8em;
 
                 & h1{
                     position: absolute;
                     top: 1.2em;
                     margin: .25em;
-                    color: #42C9FF;
+                    color: #002b3b;
+                    font-size: 1.5em;
+                    font-weight: 700;
                 }
 
                 & h2{
                     position: absolute;
-                    top: 3.25em;
+                    top: 3em;
                     margin: .25em;
+                    color: #080052;
                     font-size: 1.25em;
-                    color: #91D5F0;
+                    font-weight: 600;
+                }
+
+                & a{
+                    text-decoration: none;
+                    color: #002b3b;
                 }
             }
         }

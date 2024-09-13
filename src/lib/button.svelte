@@ -3,12 +3,13 @@
 </script>
 
 
-<button><span class="button-component">bericht</span>
-</button>
+<button> <span class="button-component">bericht</span> </button>
 
 
 <style>
     button{
+        position: absolute;
+        bottom: 1em;
         background-color: #140A3D;
         color: white;
         font-size: 16px;
