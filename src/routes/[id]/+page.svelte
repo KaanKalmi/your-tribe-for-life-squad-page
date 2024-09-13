@@ -2,14 +2,24 @@
     export let data
 
     import Brief from '$lib/briefForm.svelte';
+    import { onMount } from 'svelte';
 
     function checkAvatarImage (avatar) {
-    if (avatar.includes('https')) {
-      return true
-    } 
-    
-    return false
-  }
+        if (avatar.includes('https')) {
+        return true
+        } 
+        
+        return false
+    }
+
+    // Variabele om bij te houden of het artikel open is
+    let isOpen = false;
+
+    // Functie om de .open class toe te voegen
+    const toggleOpen = () => {
+        isOpen = !isOpen;
+    };
+  
 </script>
 
 <main>
@@ -44,9 +54,11 @@
 
                 </article>
             </div>
-            <Brief />
+            <div class="envelop" class:open={isOpen}>
+                <Brief />
+            </div>
 
-            <button>Brief versturen</button>
+            <button on:click={toggleOpen}>Brief versturen</button>
         </section>
 
         
@@ -125,6 +137,12 @@
         pointer-events: none;
         position: absolute;
         z-index: -1;
+    }
+    .envelop:nth-child(2) {
+        display: none;
+    }
+    .envelop.open:nth-child(2) {
+        display: flex;
     }
     .close .flap {
         transform: rotateX(0deg);
