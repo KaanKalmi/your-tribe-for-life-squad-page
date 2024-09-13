@@ -1,7 +1,9 @@
 <script>
     export let data;
-    import ButtonComponent from './button.svelte';
+    import {breakpoint, platform} from '../mediaquery.svelte'; // importing mediaqueries!
+    import ButtonComponent from '$lib/button.svelte';
     import Brief from '$lib/briefForm.svelte';
+    // import desktopCard from '$lib/desktopCard.svelte';
 
     // function checkAvatarImage(avatar) {
     //     if (avatar.includes('https')) {
@@ -14,184 +16,118 @@
     console.log({data});
 </script>
 
-<header>squadpage</header>
+{#if $breakpoint == "m"}
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+body{
+    background-color: #33293A;
+}
+
+header{
+    font-size: 80px;
+    display: flex;
+    background-color: #33293A;
+    color: white;
+    font-family: "Italianno", sans-serif;
+    margin-left: 0.5em;
+    margin-block: 1em;
+}
+
+main {
+    line-height: 1.5;
+    font-family: "Italianno", sans-serif;
+    font-size: 16px;
+    background-color: #33293A;
+
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .container {
+        flex: 1 1 calc(15%);
+        box-sizing: border-box;
+    }
+
+    .businessCard{
+        position: relative;
+        width: 500px;
+        height: 350px;
+        background-color: #252525;
+        border-radius: 8px;
+        border: 2px solid #91d5f025;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        box-shadow: 4px 8px 12px 8px rgba(0,0,0,0.35);
+
+        & .leftAligned{
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 45%;
+            
+            & img{
+                height: 100%;
+                width: 100%;
+                border-radius: 8px 0 0 8px; 
+                border-right: 1px solid #42C9FF;
+            }
+        }
+
+        & .figure{
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        & .rightAligned{
+            margin-left: 10em;
+
+            & h1{
+                position: absolute;
+                top: 1.2em;
+                margin: .25em;
+                color: #42C9FF;
+            }
+
+            & h2{
+                position: absolute;
+                top: 3.25em;
+                margin: .25em;
+                font-size: 1.25em;
+                color: #91D5F0;
+            }
+        }
+    }
+}
+</style>
+{/if} 
+<header> squadpage </header>
 <body>
-
-
 <main>
-
-
-<ul>
-    {#each data.squadD as person}
-        <li>
-            {#if person.avatar}
-                <img alt="Foto van {person.name}" src="{person.avatar}">
-            {:else}
-                <img alt="standard icon"
-                     src="../../static/images/profile-icon.png"/>
-            {/if}
-            <div>
-                <a href="/{person.id}">
-
-
-                    {person.name}
-                </a>
-                <span>klas : {person.squad_id}</span>
-                <ButtonComponent>
-
-                </ButtonComponent>
-
-            </div>
-
-        </li>
-    {/each}
-</ul>
-
-<p>dit is de F klas </p>
-<ul>
-    {#each data.squadF as person}
-        <li>
-            {#if person.avatar}
-                <img alt="Foto van {person.name}" src="{person.avatar}">
-            {:else}
-                <img alt="standard icon"
-                     src="../../static/images/profile-icon.png"/>
-            {/if}
-            <div>
-                <a href="/{person.id}">
-
-
-                    {person.name}
-                </a>
-                <span>klas : {person.squad_id}</span>
-                <ButtonComponent>
-
-                </ButtonComponent>
-
-            </div>
-
-        </li>
-    {/each}
-</ul>
-<p>dit is de E klas </p>
-
-<ul>
-    {#each data.squadE as person}
-        <li>
-            {#if person.avatar}
-                <img alt="Foto van {person.name}" src="{person.avatar}">
-            {:else}
-                <img alt="standard icon"
-                     src="../../static/images/profile-icon.png"/>
-            {/if}
-            <div>
-                <a href="/{person.id}">
-
-
-                    {person.name}
-                </a>
-                <span>klas : {person.squad_id}</span>
-                <ButtonComponent>
-
-                </ButtonComponent>
-
-            </div>
-
-        </li>
-    {/each}
-</ul>
-<ButtonComponent/>
+    <div class="cards-container">
+        {#each data.squadD as person}
+        <div class="container">
+            <article class="businessCard">
+                <div class="leftAligned">
+                    {#if person.avatar}
+                        <img alt="Foto van {person.name}" src="{person.avatar}">
+                    {:else}
+                        <img alt="standard icon" src="$lib/assets/pfp.png"/>
+                    {/if}
+                </div>
+                <div class="rightAligned">
+                    <h1> <a href="/{person.id}"> {person.name} </a> </h1>
+                    <h2> klas : {person.squad_id} </h2>
+                    <ButtonComponent> </ButtonComponent>
+                </div>
+            </article>
+        </div>
+        {/each}
+    </div>
 </main>
 </body>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-
-
-    body{
-        background-color: #33293A;
-
-    }
-    header{
-        font-size: 80px;
-        display: flex;
-        background-color: #33293A;
-        color: white;
-        font-family: "Italianno", sans-serif;
-        margin-left: 0.5em;
-    }
-
-    main {
-        line-height: 1.5;
-        font-family: "Italianno", sans-serif;
-        font-size: 16px;
-        background-color: #33293A;
-    }
-
-    ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
-        gap: 2em;
-        /*max-width: 1400px;*/
-
-    }
-
-    li {
-        border-radius: 2px;
-        border: 1px solid #7C7535;
-        background: #CDCDBF;
-        box-shadow: 6px 8px 12px 0px rgba(0, 0, 0, 0.35);
-        width: 350px;
-        height: 225px;
-        flex-shrink: 0;
-        display: grid;
-        /*grid-template-columns: 200px 1fr;*/
-        /*grid-template-rows: auto auto auto;*/
-
-
-    }
-    img{
-        width: 128px;
-        grid-column: 1;
-        display: grid;
-        align-items: center;
-        stroke-width: 1px;
-        stroke: rgba(30, 30, 30, 0.50);
-        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
-        align-self: center;
-        padding-left: 2em;
-    }
-    div{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-column: 2;
-        align-items: center;
-        justify-content: center;
-        border-left: #140A3D 2px solid;
-        padding-left: 1em;
-        font-size: 25px;
-      margin: 1em 0 1em 0
-    }
-    a{
-        grid-column: 1;
-        font-size: 40px;
-        color: black;
-
-
-    }
-    span{
-
-        /*grid-column: 2;*/
-        grid-column: 1;
-
-    }
-
-    .button-component{
-
-        grid-column: 1;
-    }
-
-
-</style>
 <Brief/>
