@@ -107,9 +107,22 @@
                     font-weight: 600;
                 }
 
-                & a{
-                    text-decoration: none;
-                    color: #002b3b;
+                &     a{
+                position: absolute;
+                bottom: 1em;
+                background-color: #140A3D;
+                color: white;
+                font-size: 16px;
+                padding: 16px 30px;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+                width: 108px;
+                border-radius: 6px;
+                box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.20);
+                height: 47px;
+                grid-column: 1;
+                text-decoration: none;
                 }
             }
         }
@@ -130,9 +143,9 @@
                     {/if}
                 </div>
                 <div class="rightAligned">
-                    <h1> <a href="/{person.id}"> {person.name} </a> </h1>
+                    <h1> {person.name} </h1>
                     <h2> klas : {person.squad_id} </h2>
-                    <ButtonComponent> </ButtonComponent>
+                    <a href="/{person.id}"> bericht </a>
                 </div>
             </article>
         </div>
