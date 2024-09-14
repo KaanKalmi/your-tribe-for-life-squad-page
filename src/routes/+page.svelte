@@ -107,50 +107,53 @@
                     font-weight: 600;
                 }
 
-                &     a{
-                position: absolute;
-                bottom: 1em;
-                background-color: #140A3D;
-                color: white;
-                font-size: 16px;
-                padding: 16px 30px;
-                border: none;
-                cursor: pointer;
-                text-align: center;
-                width: 108px;
-                border-radius: 6px;
-                box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.20);
-                height: 47px;
-                grid-column: 1;
-                text-decoration: none;
+                & a{
+                    position: absolute;
+                    bottom: 1em;
+                    background-color: #140A3D;
+                    color: white;
+                    font-size: 16px;
+                    padding: 16px 30px;
+                    border: none;
+                    cursor: pointer;
+                    text-align: center;
+                    width: 108px;
+                    border-radius: 6px;
+                    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.20);
+                    height: 47px;
+                    grid-column: 1;
+                    text-decoration: none;
                 }
             }
         }
     }
 </style>
-<header> squadpage </header>
+
 <body>
-<main>
-    <div class="cards-container">
-        {#each data.persons as person}
-        <div class="container">
-            <article class="businessCard">
-                <div class="leftAligned">
-                    {#if person.avatar}
-                        <img src="{person.avatar}" alt=" ">
-                    {:else}
-                        <img src="{pfp}" alt=" ">
-                    {/if}
-                </div>
-                <div class="rightAligned">
-                    <h1> {person.name} </h1>
-                    <h2> klas : {person.squad_id} </h2>
-                    <a href="/{person.id}"> bericht </a>
-                </div>
-            </article>
+    <header> 
+        squadpage 
+    </header>
+    <main>
+        <div class="cards-container">
+            {#each data.persons as person}
+            <div class="container">
+                <article class="businessCard">
+                    <div class="leftAligned">
+                        {#if person.avatar}
+                            <img src="{person.avatar}" alt=" ">
+                        {:else}
+                            <img src="{pfp}" alt=" ">
+                        {/if}
+                    </div>
+                    <div class="rightAligned">
+                        <h1> {person.name} </h1>
+                        <h2> klas : {person.squad_id} </h2>
+                        <a href="/{person.id}"> bericht </a>
+                    </div>
+                </article>
+            </div>
+            {/each}
         </div>
-        {/each}
-    </div>
-</main>
+    </main>
 </body>
 <Brief/>
