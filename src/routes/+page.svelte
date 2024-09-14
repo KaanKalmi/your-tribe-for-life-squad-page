@@ -47,6 +47,18 @@
             box-sizing: border-box;
         }
 
+        & .container:nth-child(even){
+            & .businessCard{
+                transform: rotate(-.5deg);
+            }
+        }
+    
+        & .container:nth-child(odd){
+            & .businessCard{
+                transform: rotate(.5deg);
+            }
+        }
+
         & .businessCard{
             position: relative;
             width: 500px;
