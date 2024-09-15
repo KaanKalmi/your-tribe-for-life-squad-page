@@ -47,21 +47,21 @@
             box-sizing: border-box;
         }
 
-        & .container:nth-child(even){
+        & .container:nth-child(even) {
             & .businessCard{
                 transform: rotate(-.5deg);
             }
         }
     
-        & .container:nth-child(odd){
+        & .container:nth-child(odd) {
             & .businessCard{
                 transform: rotate(.5deg);
             }
         }
 
-        & .businessCard{
+        & .businessCard {
             position: relative;
-            width: 500px;
+            width: 550px;
             height: 350px;
             background-color: #fdf3e2;
             border-radius: 8px;
@@ -71,13 +71,13 @@
             margin: auto;
             box-shadow: 4px 8px 12px 8px rgba(0,0,0,0.25);
 
-            & .leftAligned{
+            & .leftAligned {
                 position: absolute;
                 left: 0;
                 height: 100%;
                 width: 50%;
                 
-                & img{
+                & img {
                     height: 100%;
                     width: 100%;
                     border-radius: 6px 0 0 6px; 
@@ -86,39 +86,48 @@
                 }
             }
 
-            & .rightAligned{
-                margin-left: 8em;
+            & .rightAligned {
+                margin-left: 1em;
 
-                & h1{
+                & h1 {
                     position: absolute;
-                    top: 1.2em;
-                    margin: .25em;
+                    top: 0;
+                    margin: 0;
                     color: #002b3b;
                     font-size: 1.5em;
                     font-weight: 700;
                 }
 
-                & h2{
+                & h2 {
                     position: absolute;
-                    top: 3em;
-                    margin: .25em;
+                    top: 1.5em;
+                    margin: 0;
                     color: #080052;
                     font-size: 1.25em;
                     font-weight: 600;
                 }
 
-                & a{
+                & p{
                     position: absolute;
-                    bottom: 1em;
+                    top: 4em;
+                    margin: 0;
+                    color: #080052;
+                    width: 25ch;
+                }
+
+                & a {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
                     background-color: #140A3D;
                     color: white;
                     font-size: 16px;
-                    padding: 16px 30px;
+                    padding: 16px;
                     border: none;
                     cursor: pointer;
                     text-align: center;
                     width: 108px;
-                    border-radius: 6px;
+                    border-radius: 24px 0 6px;
                     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.20);
                     height: 47px;
                     grid-column: 1;
@@ -134,7 +143,7 @@
         squadpage 
     </header>
     <main>
-        <div class="cards-container">
+        <section class="cards-container">
             {#each data.persons as person}
             <div class="container">
                 <article class="businessCard">
@@ -146,14 +155,15 @@
                         {/if}
                     </div>
                     <div class="rightAligned">
-                        <h1> {person.name} </h1>
+                        <h1> {person.name} {person.prefix} {person.surname} </h1>
                         <h2> klas : {person.squad_id} </h2>
+                        <p> {person.bio}</p>
                         <a href="/{person.id}"> bericht </a>
                     </div>
                 </article>
             </div>
             {/each}
-        </div>
+        </section>
     </main>
 </body>
 <Brief/>
