@@ -1,9 +1,5 @@
 <script>
 	export let data;
-    // export let tekst;
-
-    // Values that are passed in as props
-    // are immediately available
     console.log({ data });
 </script>
 
@@ -20,6 +16,7 @@
         background-color: var(--envelopColor);
         padding: 1.5rem;
     }
+
     article textarea {
         width: -webkit-fill-available;
         /* border: 2px solid 	#d8d0c4; */
@@ -30,18 +27,18 @@
         font-size: 1rem;
         font-family: "Shantell Sans", system-ui;
         color: #1D1968;
-
         resize: none;
     }
+
     article h3 {
         margin: 0;
         padding: 0 0;
         align-self: center;
-
         font-family: "Shantell Sans", system-ui;
         color: #1D1968;
         font-weight: 500;
     }
+
     button {
         border: none;
         font-size: 1rem;
@@ -53,6 +50,7 @@
         cursor: pointer;
         transition: .5s ease-out;
     }
+
     button:hover {
         background-color: rgb(220, 35, 35); 
     }
@@ -61,7 +59,6 @@
 <article>
     <form action="">
         <textarea name="brief" id="brief" placeholder="Schrijf je bericht"></textarea>
-        
     </form>
 
     <h3>Liefs, Naam...</h3> <button>Verstuur</button>

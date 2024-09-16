@@ -1,26 +1,25 @@
 <script>
-
+    export let data;
+    console.log({ data });
 </script>
 
-
-<button> <span class="button-component">bericht</span> </button>
-
-
 <style>
-    button{
-        position: absolute;
-        bottom: 1em;
-        background-color: #140A3D;
-        color: white;
-        font-size: 16px;
-        padding: 16px 30px;
+    .buttoncomponent {
         border: none;
+        font-size: 1rem;
+        padding: .75rem 2rem;
+        background-color: rgb(239, 38, 38);
+        border-radius: 4px;
+        color: white;
+        width: max-content;
         cursor: pointer;
-        text-align: center;
-        width: 108px;
-        border-radius: 6px;
-        box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.20);
-        height: 47px;
-        grid-column: 1;
+        transition: .5s ease-out;
+        text-decoration: none;
+    }
+
+    .buttoncomponent:hover {
+        background-color: rgb(220, 35, 35);
     }
 </style>
+
+<a class="buttoncomponent" href="person.id">Bericht</a>
