@@ -15,9 +15,9 @@
         grid-template-columns: 1fr;
         grid-template-rows: 4fr 1fr;
         gap: 1.5rem;
-        background-color: #f6eee3;
-        width: 80vmin;
-        min-height: 40vh;
+        width: 50rem;
+        min-height: 55vh;
+        background-color: var(--envelopColor);
         padding: 1.5rem;
     }
     article textarea {
@@ -28,7 +28,8 @@
         height: -webkit-fill-available;
         padding: .75rem;
         font-size: 1rem;
-        font-family: "Caveat", cursive;
+        font-family: "Shantell Sans", system-ui;
+        color: #1D1968;
 
         resize: none;
     }
@@ -37,8 +38,9 @@
         padding: 0 0;
         align-self: center;
 
-        font-family: "Caveat", cursive;
-        font-weight: 400;
+        font-family: "Shantell Sans", system-ui;
+        color: #1D1968;
+        font-weight: 500;
     }
     button {
         border: none;
