@@ -12,7 +12,6 @@
     }
 </script>
 
-
 <style>
     .cards-container {
         display: flex;

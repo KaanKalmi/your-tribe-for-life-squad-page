@@ -1,6 +1,5 @@
 <script>
     export let data;
-
     let persons = data.persons;
     import Brief from '$lib/briefForm.svelte';
     import DesktopCard from '../lib/desktopCard.svelte';
