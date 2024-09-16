@@ -7,6 +7,17 @@
     console.log({ data });
 </script>
 
+
+<article class="brief">
+    <form action="">
+        <textarea name="brief" id="brief" placeholder="Schrijf je bericht"></textarea>
+        
+    </form>
+
+    <h3>Liefs, Naam...</h3> <button>Verstuur</button>
+</article>
+
+
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
@@ -15,9 +26,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: 4fr 1fr;
         gap: 1.5rem;
-        width: 50rem;
-        min-height: 55vh;
-        background-color: var(--envelopColor);
         padding: 1.5rem;
     }
     article textarea {
@@ -30,14 +38,12 @@
         font-size: 1rem;
         font-family: "Shantell Sans", system-ui;
         color: #1D1968;
-
         resize: none;
     }
     article h3 {
         margin: 0;
         padding: 0 0;
         align-self: center;
-
         font-family: "Shantell Sans", system-ui;
         color: #1D1968;
         font-weight: 500;
@@ -57,12 +63,3 @@
         background-color: rgb(220, 35, 35); 
     }
 </style>
-
-<article>
-    <form action="">
-        <textarea name="brief" id="brief" placeholder="Schrijf je bericht"></textarea>
-        
-    </form>
-
-    <h3>Liefs, Naam...</h3> <button>Verstuur</button>
-</article>

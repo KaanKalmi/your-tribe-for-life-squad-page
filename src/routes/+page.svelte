@@ -2,6 +2,7 @@
     export let data;
     import ButtonComponent from './button.svelte';
     import Brief from '$lib/briefForm.svelte';
+    import Header from '$lib/headerFdnd.svelte';
 
     // function checkAvatarImage(avatar) {
     //     if (avatar.includes('https')) {
@@ -14,9 +15,10 @@
     console.log({data});
 </script>
 
-<header>squadpage</header>
+<!-- <header>squadpage</header> -->
 <body>
 
+<Header />
 
 <main>
 
@@ -106,19 +108,18 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
-
     body{
         background-color: #33293A;
 
     }
-    header{
+    /* header{
         font-size: 80px;
         display: flex;
         background-color: #33293A;
         color: white;
         font-family: "Italianno", sans-serif;
         margin-left: 0.5em;
-    }
+    } */
 
     main {
         line-height: 1.5;
@@ -139,12 +140,14 @@
     li {
         border-radius: 2px;
         border: 1px solid #7C7535;
-        background: #CDCDBF;
+        background: var(--envelopColor);
         box-shadow: 6px 8px 12px 0px rgba(0, 0, 0, 0.35);
         width: 350px;
         height: 225px;
         flex-shrink: 0;
         display: grid;
+        /* font-family: var(--fontHandwritting);
+        font-size: 1rem; */
         /*grid-template-columns: 200px 1fr;*/
         /*grid-template-rows: auto auto auto;*/
 
@@ -177,8 +180,7 @@
         grid-column: 1;
         font-size: 40px;
         color: black;
-
-
+        text-decoration: none;
     }
     span{
 
