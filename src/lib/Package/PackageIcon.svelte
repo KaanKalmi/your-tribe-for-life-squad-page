@@ -13,7 +13,7 @@
   export let rotation = { x: "-10deg", y: "-15deg" };
 </script>
 
-<div class="wrapper" style=" --rotation-x: {rotation.x}; --rotation-y: {rotation.y}">
+<div class="wrapper" style="--rotation-x: {rotation.x}deg; --rotation-y: {rotation.y}deg">
   <div class="top-left" style="--color: {colors.topLeft}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
   <div class="top-right" style="--color: {colors.topRight}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
   <div class="left" style="--color: {colors.left}; --border-color: {colors.border}; --package-size: {size}rem;"></div>

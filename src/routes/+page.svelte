@@ -17,8 +17,8 @@
       border: "#c9a574",
     }}
     size={8}
-    rotation={{ x: "-10deg", y: "-15deg" }}
-    squad={"Squad C"}
+    rotation={{ x: "-10", y: "-15" }}
+    title={"Squad C"}
     href={"/squad-c"}
   />
 
@@ -33,8 +33,8 @@
     border: "#c9a574",
   }}
   size={8}
-    rotation={{ x: "-10deg", y: "15deg" }}
-    squad={"Squad D"}
+    rotation={{ x: "-10", y: "15" }}
+    title={"Squad D"}
     href={"/squad-d"}
   />
 </main>

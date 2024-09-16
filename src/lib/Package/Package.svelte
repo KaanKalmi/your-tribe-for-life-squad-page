@@ -1,6 +1,6 @@
 <script>
   import PackageIcon from './PackageIcon.svelte';
-  export let squad;
+  export let title;
   export let href;
   export let colors;
   export let rotation;
@@ -9,7 +9,7 @@
 
 <a href={href}>
   <PackageIcon colors={colors} rotation={rotation} size={size}/>
-  <h2>{squad}</h2>
+  <h2>{title}</h2>
 </a>
 
 <style>
