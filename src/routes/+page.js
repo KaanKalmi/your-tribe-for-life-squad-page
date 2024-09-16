@@ -19,14 +19,17 @@ export async function load() {
 	const everyone = 'https://fdnd.directus.app/items/person/'
 	const persons = await fetchJson(everyone)
 
+
 	return {
 		persons: persons.data,
 		squadD: squadD.data,
 		squadE: squadE.data,
 		squadF: squadF.data,
 
+
 		// dit is als de nieuwe klas toegevoegd word
 		// https://fdnd.directus.app/items/person/?filter={%22squad_id%22:6}
 		newsquad: newsquad.data
+
 	}
 }
