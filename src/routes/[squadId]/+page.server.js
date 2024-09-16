@@ -1,1 +1,0 @@
-import fetchJson from '$lib/fetch-json.js'

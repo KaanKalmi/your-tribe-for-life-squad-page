@@ -19,7 +19,7 @@
     size={8}
     rotation={{ x: "-10", y: "-15" }}
     title={"Squad C"}
-    href={"/squad-c"}
+    href={"/squad/c"}
   />
 
   <Package
@@ -35,7 +35,7 @@
   size={8}
     rotation={{ x: "-10", y: "15" }}
     title={"Squad D"}
-    href={"/squad-d"}
+    href={"/squad/d"}
   />
 </main>
 
