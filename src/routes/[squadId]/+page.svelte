@@ -1,6 +1,6 @@
 <script>
   export let data;
-  import ButtonComponent from './button.svelte';
+  import ButtonComponent from '$lib/button.svelte';
   import Brief from '$lib/briefForm.svelte';
 
   // function checkAvatarImage(avatar) {
