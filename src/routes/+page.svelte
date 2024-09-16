@@ -39,7 +39,7 @@
         & .cards-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 24px;
+            gap: 16px;
         }
 
         & .container {
@@ -61,7 +61,7 @@
 
         & .businessCard {
             position: relative;
-            width: 550px;
+            width: 525px;
             height: 350px;
             background-color: #fdf3e2;
             border-radius: 8px;
