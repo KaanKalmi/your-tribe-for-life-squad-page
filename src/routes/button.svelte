@@ -3,20 +3,23 @@
 </script>
 
 
-<button><span class="button-component">dit is het button component</span>
-</button>
+<a class="buttoncomponent" href="person.id">person.id</a>
 
 
 <style>
-    button{
-
-        background-color: #ffdddd;
-        color: black;
-        font-size: 16px;
-        padding: 16px 30px;
+    .buttoncomponent {
         border: none;
+        font-size: 1rem;
+        padding: .75rem 2rem;
+        background-color: rgb(239, 38, 38);
+        border-radius: 4px;
+        color: white;
+        width: max-content;
         cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
+        transition: .5s ease-out;
+        text-decoration: none;
+    }
+    .buttoncomponent:hover {
+        background-color: rgb(220, 35, 35);
     }
 </style>

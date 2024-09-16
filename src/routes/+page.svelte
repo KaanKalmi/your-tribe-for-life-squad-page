@@ -6,8 +6,8 @@
 </script>
 
 <h1>Example:</h1>
-<h2>{data.persons[2].name}</h2>
-<p>{data.persons[2].prefix} {data.persons[2].surname}</p>
+<h2>{data.persons.name}</h2>
+<p>{data.persons.prefix} {data.persons.surname}</p>
 <ButtonComponent />
 <style>
 
