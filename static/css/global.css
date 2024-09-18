@@ -23,9 +23,20 @@ body {
 .brief {
     position: relative;
     background-color: var(--envelopColor);
-    width: 50rem;
+    /* width: 50rem;
+    min-height: 55vh; */
+    width: 80vw;
+    max-width: 50rem;
     min-height: 55vh;
     font-family: var(--fontHandwritting);
     color: var(--fontColor);
     border-radius: 8px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+@media (max-width: 768px) {
+    .envelop article, 
+    .brief {
+        width: 90vw; /* aanpassing voor tablets en kleinere schermen */
+        min-height: 65vh; /* verhoog de minimale hoogte */
+    }
 }

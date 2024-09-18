@@ -6,15 +6,15 @@
     // console.log({ data });
 </script>
 
-<section>
+<header>
     <a href="/" aria-label="back button">
         <img alt="back button" src="../../assets/chevronRight.svg">
     </a>
     <h2>Fdnd</h2>
-</section>
+</header>
 
 <style>
-    section{
+    header{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
@@ -22,7 +22,7 @@
         width: 100%;
         padding: 2rem;
     }
-    section a {
+    header a {
         width: 3rem;
         height: 3rem;
         background-color: #fff;
@@ -34,7 +34,7 @@
         align-items: center;
         font-size: 1.5rem;
     }
-    section h2 {
+    header h2 {
         font-size: 3rem;
         text-transform: uppercase;
         font-family: var(--mainFont);

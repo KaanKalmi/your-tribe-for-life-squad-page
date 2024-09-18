@@ -1,6 +1,6 @@
 <script>
 	export let data;
-    export let tekst;
+    // export let tekst;
 
     // Values that are passed in as props
     // are immediately available
@@ -9,12 +9,13 @@
 
 
 <article class="brief">
-    <form action="">
+    <form> <!-- on:submit={handleSubmit} -->
         <textarea name="brief" id="brief" placeholder="Schrijf je bericht"></textarea>
-        
     </form>
 
-    <h3>Liefs, Naam...</h3> <button>Verstuur</button>
+    <h3>Liefs, {data.person.name}...</h3> 
+    
+    <button type="submit">Verstuur</button>
 </article>
 
 
