@@ -2,6 +2,7 @@
     export let data
 
     import Brief from '$lib/briefForm.svelte';
+    import backButtonIcon from '$lib/images/chevronRight.svg';
     import { onMount } from 'svelte';
 
     function checkAvatarImage (avatar) {
@@ -26,7 +27,7 @@
     <header>
         <section class="topHeader">
             <a href="/" aria-label="back button">
-                <img alt="back button" src="../../assets/chevronRight.svg">
+                <img alt="back button" src={backButtonIcon}>
             </a>
             <h2>Fdnd</h2>
         </section>
