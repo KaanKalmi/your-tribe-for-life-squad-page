@@ -33,4 +33,3 @@ export async function load() {
 
 	}
 }
-export let csr = false;
