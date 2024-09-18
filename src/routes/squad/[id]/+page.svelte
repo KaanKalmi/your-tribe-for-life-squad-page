@@ -1,6 +1,6 @@
 <script>
-    export let persons;
-    import ButtonComponent from "$lib//button.svelte";
+    export let data;
+    import ButtonComponent from "$lib/button.svelte";
     import pfp from "$lib/index.js";
 
     function checkAvatarImage(avatar) {
@@ -97,7 +97,7 @@
 </style>
 
 <section class="cards-container">
-    {#each persons as person}
+    {#each data.data as person}
         <div class="container">
             <article class="businessCard">
                 <div class="leftAligned">

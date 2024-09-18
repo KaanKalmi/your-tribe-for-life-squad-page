@@ -1,10 +1,17 @@
+<script>
+    export let style;
+</script>
+
 <style>
     .buttoncomponent {
+          position: absolute;
+          bottom: 0;
+          right: 0;
           border: none;
           font-size: 1rem;
           padding: .75rem 2rem;
           background-color: rgb(239, 38, 38);
-          border-radius: 4px;
+          border-radius: 14px 0 6px;
           color: white;
           width: max-content;
           cursor: pointer;
@@ -17,4 +24,4 @@
       }
   </style>
 
-<a class="buttoncomponent" href="person.id">Bericht</a>
+<a class="buttoncomponent" href="person.id" {style}>Bericht</a>
