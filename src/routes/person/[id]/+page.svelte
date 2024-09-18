@@ -3,6 +3,7 @@
 
     import Brief from '$lib/briefForm.svelte';
     import backButtonIcon from '$lib/images/chevronRight.svg';
+    import postzegelFrame from '$lib/images/postzegelFrame.svg';
     import { onMount } from 'svelte';
 
     function checkAvatarImage (avatar) {
@@ -44,7 +45,7 @@
                         {:else}
                             <img src="https://robohash.org/mail@ashallendesign.co.uk" alt="Avatar van {data.person.name}">
                         {/if}
-                        <img id="postZegelFrame" src="../../assets/postzegelFrame.svg" alt="postzegelFrame">
+                        <img id="postZegelFrame" src={postzegelFrame} alt="postzegel frame">
                     </div>
                 
 
