@@ -46,9 +46,18 @@
 
 <style>
   .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*gap: 16px;*/
+
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 33em));
+    column-gap: 35px;
+    row-gap: 35px;
+    justify-content: center;
+    align-items: center;
 
     & .container {
       flex: 1 1 calc(15%);
