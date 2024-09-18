@@ -1,5 +1,5 @@
 <script>
-  import Package from "$lib/package/Package.svelte";
+  import Package from "$lib/Package/Package.svelte";
   // export let data;
 </script>
 
