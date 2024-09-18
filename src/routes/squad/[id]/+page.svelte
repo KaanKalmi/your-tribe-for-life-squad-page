@@ -1,198 +1,119 @@
 <script>
-  export let data;
-  import ButtonComponent from '$lib/button.svelte';
-  import Brief from '$lib/briefForm.svelte';
+    export let persons;
+    import ButtonComponent from "$lib//button.svelte";
+    import pfp from "$lib/index.js";
 
-  // function checkAvatarImage(avatar) {
-  //     if (avatar.includes('https')) {
-  //         return true
-  //     }
+    function checkAvatarImage(avatar) {
+        if (avatar.includes("https")) {
+            return true;
+        }
 
-  //     return false
-  // }
-
-  console.log({data});
+        return false;
+    }
 </script>
 
-<header>squadpage</header>
-<body>
-
-
-<main>
-
-
-<ul>
-  {#each data.squadD as person}
-      <li>
-          {#if person.avatar}
-              <img alt="Foto van {person.name}" src="{person.avatar}">
-          {:else}
-              <img alt="standard icon"
-                   src="../../static/images/profile-icon.png"/>
-          {/if}
-          <div>
-              <a href="/{person.id}">
-
-
-                  {person.name}
-              </a>
-              <span>klas : {person.squad_id}</span>
-              <ButtonComponent>
-
-              </ButtonComponent>
-
-          </div>
-
-      </li>
-  {/each}
-</ul>
-
-<p>dit is de F klas </p>
-<ul>
-  {#each data.squadF as person}
-      <li>
-          {#if person.avatar}
-              <img alt="Foto van {person.name}" src="{person.avatar}">
-          {:else}
-              <img alt="standard icon"
-                   src="../../static/images/profile-icon.png"/>
-          {/if}
-          <div>
-              <a href="/{person.id}">
-
-
-                  {person.name}
-              </a>
-              <span>klas : {person.squad_id}</span>
-              <ButtonComponent>
-
-              </ButtonComponent>
-
-          </div>
-
-      </li>
-  {/each}
-</ul>
-<p>dit is de E klas </p>
-
-<ul>
-  {#each data.squadE as person}
-      <li>
-          {#if person.avatar}
-              <img alt="Foto van {person.name}" src="{person.avatar}">
-          {:else}
-              <img alt="standard icon"
-                   src="../../static/images/profile-icon.png"/>
-          {/if}
-          <div>
-              <a href="/{person.id}">
-
-
-                  {person.name}
-              </a>
-              <span>klas : {person.squad_id}</span>
-              <ButtonComponent>
-
-              </ButtonComponent>
-
-          </div>
-
-      </li>
-  {/each}
-</ul>
-<ButtonComponent/>
-</main>
-</body>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
 
+        & .container {
+            flex: 1 1 calc(15%);
+            box-sizing: border-box;
+        }
 
-  body{
-      background-color: #33293A;
+        & .container:nth-child(even) {
+            & .businessCard {
+                transform: rotate(-0.5deg);
+            }
+        }
 
-  }
-  header{
-      font-size: 80px;
-      display: flex;
-      background-color: #33293A;
-      color: white;
-      font-family: "Italianno", sans-serif;
-      margin-left: 0.5em;
-  }
+        & .container:nth-child(odd) {
+            & .businessCard {
+                transform: rotate(0.5deg);
+            }
+        }
 
-  main {
-      line-height: 1.5;
-      font-family: "Italianno", sans-serif;
-      font-size: 16px;
-      background-color: #33293A;
-  }
+        & .businessCard {
+            position: relative;
+            width: 525px;
+            height: 350px;
+            background-color: #fdf3e2;
+            border-radius: 8px;
+            border: 2px solid #3b3b3b;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            box-shadow: 4px 8px 12px 8px rgba(0, 0, 0, 0.25);
 
-  ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            & .leftAligned {
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 40%;
 
-      gap: 2em;
-      /*max-width: 1400px;*/
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 6px 0 0 6px;
+                    border-right: 2px solid #3b3b3b;
+                    object-fit: cover;
+                }
+            }
 
-  }
+            & .rightAligned {
+                margin-left: -5em;
 
-  li {
-      border-radius: 2px;
-      border: 1px solid #7C7535;
-      background: #CDCDBF;
-      box-shadow: 6px 8px 12px 0px rgba(0, 0, 0, 0.35);
-      width: 350px;
-      height: 225px;
-      flex-shrink: 0;
-      display: grid;
-      /*grid-template-columns: 200px 1fr;*/
-      /*grid-template-rows: auto auto auto;*/
+                & h1 {
+                    position: absolute;
+                    top: 0;
+                    margin: 0;
+                    color: #002b3b;
+                    font-size: 1.45em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
 
+                & h2 {
+                    position: absolute;
+                    top: 1.5em;
+                    margin: 0;
+                    color: #080052;
+                    font-size: 1.25em;
+                    font-weight: 600;
+                }
 
-  }
-  img{
-      width: 128px;
-      grid-column: 1;
-      display: grid;
-      align-items: center;
-      stroke-width: 1px;
-      stroke: rgba(30, 30, 30, 0.50);
-      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
-      align-self: center;
-      padding-left: 2em;
-  }
-  div{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      grid-column: 2;
-      align-items: center;
-      justify-content: center;
-      border-left: #140A3D 2px solid;
-      padding-left: 1em;
-      font-size: 25px;
-    margin: 1em 0 1em 0
-  }
-  a{
-      grid-column: 1;
-      font-size: 40px;
-      color: black;
-
-
-  }
-  span{
-
-      /*grid-column: 2;*/
-      grid-column: 1;
-
-  }
-
-  .button-component{
-
-      grid-column: 1;
-  }
-
-
+                & p {
+                    position: absolute;
+                    top: 4em;
+                    margin: 0;
+                    color: #080052;
+                    width: 25ch;
+                }
+            }
+        }
+    }
 </style>
 
-<Brief/>
+<section class="cards-container">
+    {#each persons as person}
+        <div class="container">
+            <article class="businessCard">
+                <div class="leftAligned">
+                    {#if person.avatar}
+                        <img src={person.avatar} alt=" ">
+                    {:else}
+                        <img src={pfp} alt=" ">
+                    {/if}
+                </div>
+                <div class="rightAligned">
+                    <h1>{person.name} {person.prefix} {person.surname}</h1>
+                    <h2>klas : {person.squad_id}</h2>
+                    <p>{person.bio}</p>
+                    <ButtonComponent />
+                </div>
+            </article>
+        </div>
+    {/each}
+</section>
