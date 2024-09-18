@@ -1,5 +1,6 @@
 <script>
     export let style;
+    export let href;
 </script>
 
 <style>
@@ -24,4 +25,4 @@
       }
   </style>
 
-<a class="buttoncomponent" href="person.id" {style}>Bericht</a>
+<a class="buttoncomponent" {href} {style}>Bericht</a>
