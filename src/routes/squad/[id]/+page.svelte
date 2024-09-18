@@ -28,9 +28,9 @@
       <article class="businessCard">
         <div class="leftAligned">
           {#if person.avatar}
-            <img src={person.avatar} alt=" " />
+            <img src={person.avatar} alt="{person.name} {person.prefix} {person.surname} avatar" />
           {:else}
-            <img src={pfp} alt=" " />
+            <img src={pfp} alt="default avatar" />
           {/if}
         </div>
         <div class="rightAligned">
