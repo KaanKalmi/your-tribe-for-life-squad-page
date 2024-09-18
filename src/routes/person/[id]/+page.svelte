@@ -27,7 +27,7 @@
 </script>
 
 
-<Header />
+<Header backHref={`/squad/${data.person.squad_id}`}/>
 
 <main>
         <section>

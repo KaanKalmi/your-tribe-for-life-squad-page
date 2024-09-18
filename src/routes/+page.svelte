@@ -1,9 +1,9 @@
 <script>
   import Package from "$lib/package/Package.svelte";
-  // export let data
+  import Header from "$lib/headerFdnd.svelte";
 </script>
 
-<h1>FDND</h1>
+<Header />
 
 <main>
   <Package
