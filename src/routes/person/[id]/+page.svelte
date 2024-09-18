@@ -5,6 +5,8 @@
     import backButtonIcon from '$lib/images/chevronRight.svg';
     import postzegelFrame from '$lib/images/postzegelFrame.svg';
     import { onMount } from 'svelte';
+    import Header from '../../lib/headerFdnd.svelte';
+    import { slide } from 'svelte/transition';
 
     function checkAvatarImage (avatar) {
         if (avatar.includes('https')) {
@@ -23,6 +25,9 @@
     };
   
 </script>
+
+
+<Header />
 
 <main>
     <header>
@@ -49,86 +54,57 @@
                     </div>
                 
 
-                    <div>
-                        <h1>{data.person.name} {data.person.surname}</h1>
-                        <h3>Squad {data.person.squad_id}</h3>
-                    </div>
+                <div>
+                    <h1>{data.person.name} {data.person.surname}</h1>
+                    <h3>Squad {data.person.squad_id}</h3>
+                </div>
 
-                </article>
-            </div>
-            <div class="envelop" class:open={isOpen}>
-                <Brief />
-            </div>
-
-            <button on:click={toggleOpen}>Brief versturen</button>
-        </section>
+            </article>
+        </div>
 
         
-    </header>
-    
-</main>
+        <div class="envelop" class:open={isOpen}>
+            <Brief {data} />
+        </div>
 
+
+        <button class="briefOpen" on:click={toggleOpen}>Brief versturen</button>
+    </section>
+</main>
+    
 
 <style>
     main {
-        background-color: var(--mainColor);
-    }
-    header {
-        display: grid;
-        grid-template-rows:  1fr 6fr;
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
     }
-    .topHeader{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        padding: 0rem 2rem;
-    }
-    .topHeader a {
-        width: 3rem;
-        height: 3rem;
-        background-color: #fff;
-        color: var(--secondColor);
-        text-decoration: none;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-    }
-    .topHeader h2 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-        letter-spacing: 2px;
-        font-weight: 800;
-        justify-self: center;
-        color: white;
-    }
-
-    section:nth-child(2){
-        /* background-color: blue; */
+    section {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        height: 100%;
+        padding: 2rem 0rem;
     }
-
     article {
-        position: relative;
-        width: 50rem;
-        min-height: 55vh;
-        background-color: var(--envelopColor);
-        margin-bottom: 1.75rem;
         display: flex;
-        justify-content: center;
         align-items: center;
-        border-radius: 2px;
-        font-family: "Shantell Sans", system-ui;
-        color: #1D1968;
-        z-index: 99;
+        justify-content: center;
+        z-index: 9;
+    }
+    .envelop {
+        position: relative;
+    }
+    /* .envelop:nth-of-type(1) {
+        order: 2;
+    }
+    .envelop:nth-of-type(2) {
+        order: 1;
+    } */
+    .envelop:nth-of-type(1) {
+        z-index: 1;
     }
     .envelop .flap {
         border-left: 25rem solid transparent;
@@ -138,49 +114,42 @@
         transform-origin: top;
         pointer-events: none;
         position: absolute;
-        z-index: -1;
-    }
-    .envelop:nth-child(2) {
-        display: none;
-    }
-    .envelop.open:nth-child(2) {
-        display: flex;
-    }
-    .close .flap {
-        transform: rotateX(0deg);
-        transition: transform 0.4s 0.6s ease, z-index 1s;
-        z-index: 5;
-    }
-    .open .flap {
-        transform: rotateX(180deg);
+        top: .22rem;
+        border-radius: 5px;
+        z-index: -4;
+
+        /* transform: rotateX(180deg);
         transition: transform 0.4s ease, z-index 0.6s;
-        z-index: 1;
+        z-index: 1; */
     }
-    article div:nth-child(1) {
+    
+    article div.postzegel {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    article div:nth-child(1) img {
+    article div.postzegel img {
         position: absolute;
         top: 1rem;
         right: 1rem;
         object-fit: cover;
     }
-    article div:nth-child(1) h3 {
+    article div.postzegel h3 {
         position: absolute;
         top: 3rem;
         right: 2.25rem;
         font-size: 5rem;
         object-fit: cover;
+        z-index: 44;
     }
     article div img:nth-child(1) {
         margin: .65rem 0.6rem;
         width: 6.6rem;
         height: 9rem;
+        z-index: 44;
     }
     img#postZegelFrame {
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        filter: drop-shadow(1px 0px 2px rgb(0 0 0 / 0.25));
     }
     article div {
         display: flex;
@@ -194,7 +163,7 @@
     article h3 {
         font-weight: 100;
     }
-    button {
+    button.briefOpen {
         border: none;
         font-size: 1rem;
         padding: .75rem 2rem;
@@ -204,8 +173,56 @@
         width: max-content;
         cursor: pointer;
         transition: .5s ease-out;
+        margin-top: 1.5rem;
+        display: none;
     }
-    button:hover {
+    button.briefOpen:hover {
         background-color: rgb(220, 35, 35); 
+    }
+    /* doe dit wanneer javascript aan staat */
+    /* @media (scripting: enabled) {
+        .envelop:nth-child(2) {
+            display: none;
+        }
+        .envelop.open:nth-child(2) {
+            display: flex;
+        }
+        button.briefOpen {
+            display: block;
+        }
+        .envelop:nth-of-type(1),
+        .envelop:nth-of-type(2) {
+            order: unset;
+        }
+        .close .flap {
+            transform: rotateX(0deg);
+            transition: transform 0.4s 0.6s ease, z-index 1s;
+            z-index: 5;
+        }
+        .open .flap {
+            transform: rotateX(180deg);
+            transition: transform 0.4s ease, z-index 0.6s;
+            z-index: 1;
+        }
+    } */
+
+    @media (max-width: 1000px) {
+        .envelop .flap {
+            border-left: 40vw solid transparent;
+            border-right: 40vw solid transparent;
+        }   
+    }
+    @media (max-width: 768px) {
+        .envelop .flap {
+            border-left: 45vw solid transparent;
+            border-right: 45vw solid transparent;
+            border-top: 10rem solid #f5ead9
+        }     
+    }
+    @media (max-width: 480px) {
+        .envelop .flap {
+            border-left: 45vw solid transparent;
+            border-right: 45vw solid transparent;
+        }
     }
 </style>
