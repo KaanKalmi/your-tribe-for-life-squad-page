@@ -13,12 +13,15 @@ Dit is een FDND squad page gemaakt d.m.v. SvelteKit en Directus
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
+De website is bedoelt om kennis te maken met alle squad leden van squad C en D, hierbij kan je ook een bericht versturen naar de squadleden (niet werkend).
+
+Hierbij hebben wij dus als design keuze een design gekozen waarbij je kan kiezen tussen 2 pakketten, en vervolgens 'brieven' krijgt van elk squad member uit squad C of D, vervolgens kan je ze dus ook via de post een brief versturen.
+
+<!-- Voeg een mooie poster visual toe (Gebruik aub <img src=".." height=... width=...> -->
+
 **[Live link](https://effortless-choux-a35df0.netlify.app/)**
 
 ## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 - Sveltekit framework
 - Sveltekit Dynamic routing
 - Directus SDK
@@ -52,7 +55,7 @@ Volg deze stappen om het project lokaal op te zetten:
    ```
    
 ## Gebruik
-De website is bedoelt om kennis te maken met alle squad leden van squad C en D, hierbij kan je ook een (niet werkend) bericht versturen naar de squadleden.
+Je kan de website gebruiken als een introductie pagina voor de squad leden uit squad C en D
 
 ## Bronnen
 - [SvelteKit Docs - Creating a project](https://kit.svelte.dev/docs/creating-a-project)
