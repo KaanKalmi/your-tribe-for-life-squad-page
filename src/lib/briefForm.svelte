@@ -1,6 +1,6 @@
 <script>
 	export let data;
-    export let tekst;
+    // export let tekst;
 
     // Values that are passed in as props
     // are immediately available

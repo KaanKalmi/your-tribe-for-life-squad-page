@@ -1,6 +1,6 @@
 <script>
-  import Package from "$lib/Package/Package.svelte";
-  // export let data;
+  import Package from "$lib/package/Package.svelte";
+  // export let data
 </script>
 
 <h1>FDND</h1>
