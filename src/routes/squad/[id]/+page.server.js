@@ -1,13 +1,20 @@
-import fetchJson from '$lib/fetch-json.js'
+import fetchJson from "$lib/fetch-json.js";
 
 export async function load({ params }) {
-	let squadId = params.id
-	
-	// klassen vorig jaar
-	const url = `https://fdnd.directus.app/items/person/?filter={"squad_id": "${squadId}"}`
-	const data = await fetchJson(url)
+  let squadId = params.id;
+  let squadName = "F";
 
-	console.log(data);
+  const url = `https://fdnd.directus.app/items/person/?filter={"squad_id": "${squadId}"}`;
+  const data = await fetchJson(url)
 
-	return { data: data.data }
+  switch (squadId) {
+    case 3:
+      squadName = "C";
+      break;
+    case 4:
+      squadName = "D";
+      break;
+  }
+
+  return { data: data.data };
 }

@@ -1,8 +1,11 @@
 <script>
   export let data;
+
   import ButtonComponent from "$lib/button.svelte";
   import Header from "$lib/headerFdnd.svelte";
   import pfp from "$lib/index.js";
+
+  import { page } from '$app/stores';
 
   function checkAvatarImage(avatar) {
     if (avatar.includes("https")) {
@@ -12,6 +15,10 @@
     return false;
   }
 </script>
+
+<svelte:head>
+    <title>Squad overzicht</title> 
+</svelte:head>
 
 <Header backHref="/" />
 

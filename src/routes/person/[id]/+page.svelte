@@ -23,9 +23,11 @@
     const toggleOpen = () => {
         isOpen = !isOpen;
     };
-  
 </script>
 
+<svelte:head>
+    <title>Persoonspagina</title> 
+</svelte:head>
 
 <Header backHref={`/squad/${data.person.squad_id}`}/>
 

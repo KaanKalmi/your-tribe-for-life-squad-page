@@ -3,6 +3,10 @@
   import Header from "$lib/headerFdnd.svelte";
 </script>
 
+<svelte:head>
+    <title>FDND Squads</title> 
+</svelte:head>
+
 <Header />
 
 <main>
