@@ -5,7 +5,7 @@
     import backButtonIcon from '$lib/images/chevronRight.svg';
     import postzegelFrame from '$lib/images/postzegelFrame.svg';
     import { onMount } from 'svelte';
-    import Header from '../../lib/headerFdnd.svelte';
+    import Header from '$lib/headerFdnd.svelte';
     import { slide } from 'svelte/transition';
 
     function checkAvatarImage (avatar) {
@@ -30,19 +30,11 @@
 <Header />
 
 <main>
-    <header>
-        <section class="topHeader">
-            <a href="/" aria-label="back button">
-                <img alt="back button" src={backButtonIcon}>
-            </a>
-            <h2>Fdnd</h2>
-        </section>
-
         <section>
             <div class="envelop close" class:open={isOpen}>
                 <div class="flap"></div>
                 <article>
-                    <div>
+                    <div class="postzegel">
                         {#if data.person.avatar.length > 0 && checkAvatarImage (data.person.avatar)}
                             <img src="{data.person.avatar}" alt="Avatar van {data.person.name}">
                         {:else if data.person.avatar.length > 0 || checkAvatarImage (data.person.avatar)}

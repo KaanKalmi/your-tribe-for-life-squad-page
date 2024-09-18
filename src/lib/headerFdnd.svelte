@@ -1,6 +1,8 @@
 <script>
 	export let data;
 
+  import backButtonIcon from '$lib/images/chevronRight.svg';
+
     // Values that are passed in as props
     // are immediately available
     // console.log({ data });
@@ -8,7 +10,7 @@
 
 <header>
     <a href="/" aria-label="back button">
-        <img alt="back button" src="../../assets/chevronRight.svg">
+        <img alt="back button" src={backButtonIcon}>
     </a>
     <h2>Fdnd</h2>
 </header>
