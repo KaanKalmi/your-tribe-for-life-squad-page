@@ -111,7 +111,7 @@
                     <h1>{person.name} {person.prefix} {person.surname}</h1>
                     <h2>klas : {person.squad_id}</h2>
                     <p>{person.bio}</p>
-                    <ButtonComponent />
+                    <ButtonComponent href={person.id} />
                 </div>
             </article>
         </div>

@@ -25,4 +25,4 @@
       }
   </style>
 
-<a class="buttoncomponent" {href} {style}>Bericht</a>
+<a class="buttoncomponent" href={`person/${href}`} {style}>Bericht</a>
