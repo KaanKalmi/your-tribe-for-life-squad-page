@@ -91,25 +91,6 @@
                     color: #080052;
                     width: 25ch;
                 }
-
-                & a {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    background-color: #140a3d;
-                    color: white;
-                    font-size: 16px;
-                    padding: 16px;
-                    border: none;
-                    cursor: pointer;
-                    text-align: center;
-                    width: 108px;
-                    border-radius: 24px 0 6px;
-                    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.2);
-                    height: 47px;
-                    grid-column: 1;
-                    text-decoration: none;
-                }
             }
         }
     }
@@ -121,9 +102,9 @@
             <article class="businessCard">
                 <div class="leftAligned">
                     {#if person.avatar}
-                        <img src={person.avatar} alt=" " />
+                        <img src={person.avatar} alt=" ">
                     {:else}
-                        <img src={pfp} alt=" " />
+                        <img src={pfp} alt=" ">
                     {/if}
                 </div>
                 <div class="rightAligned">
