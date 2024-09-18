@@ -49,13 +49,9 @@
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     /*gap: 16px;*/
-
-
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 33em));
-    column-gap: 35px;
-    row-gap: 35px;
+    gap: 68px;
     justify-content: center;
     align-items: center;
 
