@@ -11,7 +11,7 @@
           border: none;
           font-size: 1rem;
           padding: .75rem 2rem;
-          background-color: rgb(239, 38, 38);
+          background-color:#140a3d;
           border-radius: 14px 0 6px;
           color: white;
           width: max-content;
