@@ -20,9 +20,7 @@
           text-decoration: none;
       }
   
-      .buttoncomponent:hover {
-          background-color: rgb(220, 35, 35);
-      }
+      .buttoncomponent:hover { background-color: rgb(220, 35, 35) }
   </style>
 
 <a class="buttoncomponent" href={`/person/${href}`} {style}>Bericht</a>

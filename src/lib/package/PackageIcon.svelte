@@ -13,15 +13,6 @@
   export let rotation = { x: "-10deg", y: "-15deg" };
 </script>
 
-<div class="wrapper" style="--rotation-x: {rotation.x}deg; --rotation-y: {rotation.y}deg">
-  <div class="top-left" style="--color: {colors.topLeft}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
-  <div class="top-right" style="--color: {colors.topRight}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
-  <div class="left" style="--color: {colors.left}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
-  <div class="right" style="--color: {colors.right}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
-  <div class="front" style="--color: {colors.front}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
-  <div class="back" style="--color: {colors.back}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
-</div>
-
 <style>
   .wrapper {
     position: relative;
@@ -29,8 +20,6 @@
     transform-style: preserve-3d;
     width: 100%;
     height: 100%;
-    /* background-color: red; */
-
     --animation-speed: 0.5s;
   }
 
@@ -42,18 +31,14 @@
     height: var(--package-size);
     background-color: var(--color);
     border: 1px solid var(--border-color);
-    outline: 1px solid transparent; /* Required workaround for anti aliasing issues */
+    outline: 1px solid transparent;
   }
 
-  .left,
-  .right,
-  .front,
-  .back {
+  .left, .right, .front, .back {
     width: var(--package-size);
   }
 
-  .top-left,
-  .top-right {
+  .top-left, .top-right {
     width: calc(0.5 * var(--package-size));
   }
 
@@ -106,3 +91,12 @@
       translateZ(calc(0.5 * var(--package-size)));
   }
 </style>
+
+<div class="wrapper" style="--rotation-x: {rotation.x}deg; --rotation-y: {rotation.y}deg">
+  <div class="top-left" style="--color: {colors.topLeft}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="top-right" style="--color: {colors.topRight}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="left" style="--color: {colors.left}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="right" style="--color: {colors.right}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="front" style="--color: {colors.front}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="back" style="--color: {colors.back}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+</div>

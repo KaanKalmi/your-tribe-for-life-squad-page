@@ -4,14 +4,12 @@
   import ButtonComponent from "$lib/button.svelte";
   import Header from "$lib/headerFdnd.svelte";
   import pfp from "$lib/index.js";
-
   import { page } from '$app/stores';
 
   function checkAvatarImage(avatar) {
     if (avatar.includes("https")) {
       return true;
     }
-
     return false;
   }
 </script>
@@ -46,9 +44,6 @@
 
 <style>
   .cards-container {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*gap: 16px;*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 33em));
     gap: 68px;
@@ -61,15 +56,11 @@
     }
 
     & .container:nth-child(even) {
-      & .businessCard {
-        transform: rotate(-0.5deg);
-      }
+      & .businessCard { transform: rotate(-0.5deg); }
     }
 
     & .container:nth-child(odd) {
-      & .businessCard {
-        transform: rotate(0.5deg);
-      }
+      & .businessCard { transform: rotate(0.5deg); }
     }
 
     & .businessCard {
@@ -99,8 +90,7 @@
         }
       }
 
-      & .rightAligned {
-        margin-left: -5em;
+      & .rightAligned { margin-left: -5em;
 
         & h1 {
           position: absolute;

@@ -7,11 +7,6 @@
   export let size;
 </script>
 
-<a href={href}>
-  <PackageIcon colors={colors} rotation={rotation} size={size}/>
-  <h2>{title}</h2>
-</a>
-
 <style>
   a {
     display: flex;
@@ -33,3 +28,8 @@
     color: white;
   }
 </style>
+
+<a href={href}>
+  <PackageIcon colors={colors} rotation={rotation} size={size}/>
+  <h2>{title}</h2>
+</a>

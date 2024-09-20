@@ -3,6 +3,31 @@
   import Header from "$lib/headerFdnd.svelte";
 </script>
 
+<style>
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: white;
+    margin-top: 2rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
 <svelte:head>
     <title>FDND Squads</title> 
 </svelte:head>
@@ -42,28 +67,3 @@
     href={"/squad/4"}
   />
 </main>
-
-<style>
-  h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-family: "Open Sans", "Helvetica Neue", sans-serif;
-    letter-spacing: 2px;
-    font-weight: 800;
-    color: white;
-    margin-top: 2rem;
-  }
-
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-  }
-</style>
